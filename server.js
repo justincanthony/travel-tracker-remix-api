@@ -60,7 +60,7 @@ app.get('/api/v1/trips/:id', (req, res) => {
 		requestedTrips.map((trip) => {
 			destinations.forEach((destinationObj) => {
 				if (destinationObj.id === trip.destinationID) {
-					trip.destination = destinationObj;
+					trip.place = destinationObj;
 				}
 			});
 			return trip;
