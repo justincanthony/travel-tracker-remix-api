@@ -48,16 +48,25 @@ app.get('/api/v1/trips', (req, res) => {
 
 app.get('/api/v1/trips/:id', (req, res) => {
 	const { id } = req.params;
-	const { trips } = app.locals;
+	const { trips, destinations } = app.locals;
 
-	let requestedTrips = trips.find((trip) => trip.userID == id);
+	let requestedTrips = trips.filter((trip) => trip.userID == id);
 
 	if (!requestedTrips) {
 		return res.status(404).json({
 			message: `No trips found for traveler id: ${id}`,
 		});
+	} else {
+		requestedTrips.map((trip) => {
+			destinations.forEach((destinationObj) => {
+				if (destinationObj.id === trip.destinationID) {
+					trip.destination = destinationObj;
+				}
+			});
+			return trip;
+		});
 	}
-	res.status(200).json(requestedTrips);
+	res.status(200).json({ requestedTrips });
 });
 
 app.get('/api/v1/destinations', (req, res) => {
