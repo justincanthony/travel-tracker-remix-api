@@ -34,19 +34,19 @@ app.get('/api/v1/travelers/:username/:password', (req, res) => {
   let requestedTraveler = travelers.find((traveler) => traveler.id == id);
 
   if (password === 'traveler' && !requestedTraveler) {
-    return res.sendStatus(404).json({
+    return res.status(404).json({
       message: `Traveler not found`,
     });
   }
 
   if (password !== 'traveler' && requestedTraveler) {
-    return res.sendStatus(404).json({
+    return res.status(404).json({
       message: 'The password you have entered was incorrect, please try again.',
     });
   }
 
   if (password !== 'traveler' && !requestedTraveler) {
-    return res.sendStatus(404).json({
+    return res.status(404).json({
       message:
         'The username and password you have entered were incorrect, please try again.',
     });
