@@ -60,15 +60,16 @@ app.get('/api/v1/trips', (req, res) => {
   res.status(200).json({ trips });
 });
 
-app.get('api/v1/travelers/:id', (req, res) => {
-  const { id } = req.params;
+app.get('/api/v1/travelers/:userID', (req, res) => {
+  const { userID } = req.params;
   const { travelers } = app.locals;
 
-  let requestedTraveler = travelers.find((traveler) => traveler.id == id);
+  let requestedTraveler = travelers.find((traveler) => traveler.id == userID);
+  console.log(requestedTraveler);
 
   if (!requestedTraveler) {
     return res.status(404).json({
-      message: `No traveler found with an id of ${id}`,
+      message: `No traveler found with an id of ${userID}`,
     });
   }
 
