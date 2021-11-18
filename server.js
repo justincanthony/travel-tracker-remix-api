@@ -65,7 +65,6 @@ app.get('/api/v1/travelers/:userID', (req, res) => {
   const { travelers } = app.locals;
 
   let requestedTraveler = travelers.find((traveler) => traveler.id == userID);
-  console.log(requestedTraveler);
 
   if (!requestedTraveler) {
     return res.status(404).json({
