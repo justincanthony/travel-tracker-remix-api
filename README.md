@@ -1,4 +1,4 @@
-# travel-tracker-remix-api
+# Travel-Tracker-Remix-API
 
 <p>This repo was modified from the <a href="https://github.com/turingschool-examples/travel-tracker-api">original repo</a> to be used with the <a href="https://github.com/justincanthony/travel-tracker-remix">travel-tracker-remix project.</a></P>
 
