@@ -2,7 +2,8 @@
 
 ## Important!
 - This api has been deployed to Heroku. There may be some loading time and refreshing required in order to "wake" the app up from Heroku's sleep mode
-- This api was modified from the <a href="https://github.com/turingschool-examples/travel-tracker-api">original api</a> created by Turing School of Software and Design. 
+- This api was modified from the <a href="https://github.com/turingschool-examples/travel-tracker-api">original api</a> created by <a href="https://turing.edu/">
+Turing School of Software and Design</a>. 
 - The original api was intended to be used in conjucture with this frontend <a href="https://frontend.turing.edu/projects/travel-tracker.html">Turing project</a>
 
 
@@ -37,8 +38,9 @@ _Please note that the app may be in Heroku's sleep state and may need some loadi
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
 | Get all travelers|`http://localhost:3001/api/v1/travelers`| GET  | none | object with `travelers` property containing an array of all travelers |
-|Get single traveler|`http://localhost:3001/api/v1/travelers/<id>`     *where`<id>` will be a number of a traveler's id* | GET  | none | object of single traveler's info |
+|Get single traveler|`http://localhost:3001/api/v1/travelers/<userID>`     *where`<userID>` will be a number of a traveler's id* | GET  | none | object of single traveler's info |
 |Get all trips| `http://localhost:3001/api/v1/trips` | GET | none | object with `trips` property containing an array of all trips |
+|Get single traveler trips with matching destination object | `http://localhost:3001/api/v1/trips/<userID>` | GET | none | object with `trips` property containing an array of all trips and a `place` property containing the destination information|
 |Get all destinations| `http://localhost:3001/api/v1/destinations` | GET | none | object with `destinations` property containing an array of all destinations |
 | Add new trip |`http://localhost:3001/api/v1/trips`| POST | `{id: <number>, userID: <number>, destinationID: <number>, travelers: <number>, date: <string 'YYYY/MM/DD'>, duration: <number>, status: <string 'approved' or 'pending'>, suggestedActivities: <array of strings>}` | `{message: 'Trip with id <id> successfully posted', newTrip: <Object with trip info just posted>}`|
 | Add new destination|`http://localhost:3001/api/v1/destinations`| POST | `{id: <number>, destination: <string>, estimatedLodgingCostPerDay: <number>, estimatedFlightCostPerPerson: <number>, image: <string>, alt: <string>}` | `{message: 'Destination with id <id> successfully posted', newDestination: <Object with destination info just posted>}`|
