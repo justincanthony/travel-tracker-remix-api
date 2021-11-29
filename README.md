@@ -30,10 +30,17 @@ _or_
 
 **Use the Heroku Deployed API**
 
-Use the `https://travel-tracker-remix-api.herokuapp.com/` path to make GET, POST, and DELETE requests with the appropriate endpoints below.
+Use the `https://travel-tracker-remix-api.herokuapp.com/api/v1` path to make GET, POST, and DELETE requests with the appropriate endpoints below.
 _Please note that the app may be in Heroku's sleep state and may need some loading time to "wake up."_
 
 ## Endpoints
+
+**When using the Heroku deplyed API use the following protocol and domain:**
+`https://travel-tracker-remix-api.herokuapp.com/api/v1/`
+
+**Endpoints (suffixes) are the same**
+
+Example to retrieve all destinations: `https://travel-tracker-remix-api.herokuapp.com/api/v1/destinations`
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
