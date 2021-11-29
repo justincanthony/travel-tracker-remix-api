@@ -59,6 +59,15 @@ Example to retrieve all destinations: `https://travel-tracker-remix-api.herokuap
 | Add new destination|`http://localhost:3001/api/v1/destinations`| POST | `{id: <number>, destination: <string>, estimatedLodgingCostPerDay: <number>, estimatedFlightCostPerPerson: <number>, image: <string>, alt: <string>}` | `{message: 'Destination with id <id> successfully posted', newDestination: <Object with destination info just posted>}`|
 | Modify single trip | `http://localhost:3001/api/v1/updateTrip` | POST | `{id: <number>, status:<String of 'approved' or 'pending', suggestedActivities: <Array of strings>}` *Only a status* **or** *a suggestedActivities property is required for a successful request*| `{message: 'Trip #<id> has been modified', updatedTrip: <Object with newly updated data>}`|
 | Delete single trip| `http://localhost:3001/api/v1/trips/<id>`     *where`<id>` will be a number of a trip's id*  | DELETE | none | Trip #<id> has been deleted |
-
+  
+## Contact
+  
+<p>Justin Anthony</p>
+<a href="https://github.com/justincanthony">GitHub</a>
+<br/>
+<a class="u-email Link--primary " href="mailto:justincanthony@gmail.com">justincanthony@gmail.com</a>
+<br/>
+<a class="Link--primary" href="https://www.linkedin.com/in/justincanthony/">LinkedIn</a>
+  
 [express-shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [express-url]: https://expressjs.com/
