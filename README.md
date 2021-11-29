@@ -17,6 +17,9 @@ This api was updated to include:
 -  new logic to send the matching destination object along with the single user's trips. This simplifies the previous need for filtering and matching from two different api calls and data sets on the frontend
 - a new endpoint to verify a user's name and password information by sending the required params of username and password for logging in
 
+## Built With
+[![express js][express-shield]][express-url]
+
 
 ## Set Up - Two Methods
 
@@ -56,3 +59,6 @@ Example to retrieve all destinations: `https://travel-tracker-remix-api.herokuap
 | Add new destination|`http://localhost:3001/api/v1/destinations`| POST | `{id: <number>, destination: <string>, estimatedLodgingCostPerDay: <number>, estimatedFlightCostPerPerson: <number>, image: <string>, alt: <string>}` | `{message: 'Destination with id <id> successfully posted', newDestination: <Object with destination info just posted>}`|
 | Modify single trip | `http://localhost:3001/api/v1/updateTrip` | POST | `{id: <number>, status:<String of 'approved' or 'pending', suggestedActivities: <Array of strings>}` *Only a status* **or** *a suggestedActivities property is required for a successful request*| `{message: 'Trip #<id> has been modified', updatedTrip: <Object with newly updated data>}`|
 | Delete single trip| `http://localhost:3001/api/v1/trips/<id>`     *where`<id>` will be a number of a trip's id*  | DELETE | none | Trip #<id> has been deleted |
+
+[express-shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
+[express-url]: https://expressjs.com/
