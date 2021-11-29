@@ -1,19 +1,36 @@
 # Travel-Tracker-Remix-API
 
 ## Important!
-<p>This repo was modified from the <a href="https://github.com/turingschool-examples/travel-tracker-api">original repo</a> to be used with the <a href="https://github.com/justincanthony/travel-tracker-remix">travel-tracker-remix project.</a></P>
+- This api has been deployed to Heroku. There may be some loading time and refreshing required in order to "wake" the app up from Heroku's sleep mode
+- This api was modified from the <a href="https://github.com/turingschool-examples/travel-tracker-api">original api</a> created by Turing School of Software and Design. 
+- The original api was intended to be used in conjucture with this frontend <a href="https://frontend.turing.edu/projects/travel-tracker.html">Turing project</a>
+
 
 ## About
-<p>This api was updated to include new endpoints and verify a user's name and password information</p>
+This refactored API is intended to be used with the <a href="https://github.com/justincanthony/travel-tracker-remix">travel-tracker-remix project.</a>
+<br/>
+This api was updated to include:
+- a new endpoint for grabbing a single user's trips (past, pending, and approved) by `userID` 
+-  new logic to send the matching destination object along with the single user's trips. This simplifies the previous need for filtering and matching from two different api calls and data sets on the frontend
+- a new endpoint to verify a user's name and password information by sending the required params of username and password for logging in
 
 
-## Set Up
+## Set Up - Two Methods
+
+**To run the server locally**
 
 Clone this down, and `cd` into it.  Then run:
 
 `npm install`
 
 `npm start`
+
+_or_
+
+**Use the Heroku Deployed API**
+
+Use the `https://travel-tracker-remix-api.herokuapp.com/` path to make GET, POST, and DELETE requests with the appropriate endpoints below.
+_Please note that the app may be in Heroku's sleep state and may need some loading time to "wake up."_
 
 ## Endpoints
 
