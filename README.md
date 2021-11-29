@@ -5,11 +5,13 @@
 - This api was modified from the <a href="https://github.com/turingschool-examples/travel-tracker-api">original api</a> created by <a href="https://turing.edu/">
 Turing School of Software and Design</a>. 
 - The original api was intended to be used in conjucture with this frontend <a href="https://frontend.turing.edu/projects/travel-tracker.html">Turing project</a>
+- This api is intended to be used with the <a href="https://github.com/justincanthony/travel-tracker-remix">travel-tracker-remix project.</a>
 
 
 ## About
-This refactored API is intended to be used with the <a href="https://github.com/justincanthony/travel-tracker-remix">travel-tracker-remix project.</a>
+The goal of this project was to gain more experience with creating new endpoints to an existing api using `expressjs`. By adding several new endpoints documented below, the frontend application can simplify it's fetch calls by making more specific data requests, and lighten the load of using iterators to filter through uneeded data.
 <br/>
+
 This api was updated to include:
 - a new endpoint for grabbing a single user's trips (past, pending, and approved) by `userID` 
 -  new logic to send the matching destination object along with the single user's trips. This simplifies the previous need for filtering and matching from two different api calls and data sets on the frontend
