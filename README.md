@@ -9,7 +9,7 @@ Turing School of Software and Design</a>.
 
 
 ## About
-The goal of this project was to gain more experience with creating new endpoints to an existing api using `expressjs`. By adding several new endpoints documented below, the frontend application can simplify it's fetch calls by making more specific data requests, and lighten the load of using iterators to filter through uneeded data.
+The goal of this project was to gain more experience with creating new endpoints to an existing api using `expressjs`. By adding several new endpoints documented below, the frontend application can simplify its fetch calls by making more specific data requests, and lighten the load of using iterators to filter through uneeded data.
 <br/>
 
 This api was updated to include:
